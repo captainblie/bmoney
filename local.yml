@@ -1,16 +1,18 @@
 - hosts: localhost
-  connection: Local
+  connection: local
   become: true
 
+  pre_tasks:
+    -name: Clean repo data
+      command: dnf clean all
+        args:
+          warn: no
+    -name: Rebuild the cache
+      command: dnf makecache
+        args:
+          warn: no
+        
   tasks:
-  - name: Install Packages
-    dnf:
-      name:
-        - tigervnc-server
-        - fedora-workstation-repositories
-
-  - name: Enable Google Chrome Repo
-    command: dnf config-manager --set-enabled google-chrome
-    args:
-      warn: no
-
+    - include: tasks/packages1.yml
+    - include: tasks/repo_enable.yml
+    - include: tasks/packages2.yml

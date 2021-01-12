@@ -1,0 +1,6 @@
+tasks:
+- name: First pass of packages installation
+  dnf:
+    name:
+      - tigervnc-server
+      - fedora-workstation-repositories

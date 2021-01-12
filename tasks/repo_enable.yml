@@ -1,0 +1,4 @@
+- name: Enable Google Chrome Repo
+  command: dnf config-manager --set-enabled google-chrome
+  args:
+    warn: no

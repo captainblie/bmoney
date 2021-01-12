@@ -6,11 +6,11 @@
     - name: Clean repo data
       command: dnf clean all
       args:
-      warn: no
+        warn: no
     - name: Rebuild the cache
       command: dnf makecache
       args:
-      warn: no
+        warn: no
         
   tasks:
     - include: tasks/packages1.yml

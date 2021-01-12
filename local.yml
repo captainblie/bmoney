@@ -16,3 +16,5 @@
     - include: tasks/packages1.yml
     - include: tasks/repo_enable.yml
     - include: tasks/packages2.yml
+    - include: tasks/users.yml
+    - include: tasks/cron.yml

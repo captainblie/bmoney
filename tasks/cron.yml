@@ -1,0 +1,6 @@
+- name: Install crontab for ansible user
+  cron:
+    user: ansible
+    name: "Ansible provision"
+    minute: "0"
+    job: "sleep $((RANDOM%3000)) && /usr/bin/ansible-pull -o -U https://github.com/captainblie/bmoney.git"

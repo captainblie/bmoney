@@ -1,0 +1,16 @@
+- hosts: localhost
+  connection: Local
+  become: true
+
+  tasks:
+  - name: Install Packages
+    dnf:
+      name:
+        - tigervnc-server
+        - fedora-workstation-repositories
+
+  - name: Enable Google Chrome Repo
+    command: dnf config-manager --set-enabled google-chrome
+    args:
+      warn: no
+

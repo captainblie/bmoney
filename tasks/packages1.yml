@@ -1,4 +1,3 @@
-tasks:
 - name: First pass of packages installation
   dnf:
     name:

@@ -5,12 +5,12 @@
   pre_tasks:
     - name: Clean repo data
       command: dnf clean all
-        args:
-          warn: no
+      args:
+      warn: no
     - name: Rebuild the cache
       command: dnf makecache
-        args:
-          warn: no
+      args:
+      warn: no
         
   tasks:
     - include: tasks/packages1.yml

@@ -3,11 +3,11 @@
   become: true
 
   pre_tasks:
-    -name: Clean repo data
+    - name: Clean repo data
       command: dnf clean all
         args:
           warn: no
-    -name: Rebuild the cache
+    - name: Rebuild the cache
       command: dnf makecache
         args:
           warn: no

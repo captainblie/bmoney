@@ -1,2 +1,2 @@
 # bmoney
-A Project for running Beer Money VM's
+A Project for running Beer Money VM's.

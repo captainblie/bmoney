@@ -1,4 +1,4 @@
-- name: First pass of packages installation
+- name: "First pass of packages installation"
   dnf:
     name:
       - tigervnc-server

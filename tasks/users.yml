@@ -1,13 +1,13 @@
-- name: Create Admin user
+- name: "Create Admin user"
   user:
     name: admin
     system: yes
     local: yes
-    password: $6$3x4QOzcRQv8Tlt1T$OUx.rEP/PSk3xzJBC8QP.FpNRQTlTBQlsZYAwDWGt8BMHbnZTivkQd7kHeCdWBZZthIDuu1UlDHcVY6zDfiMo0
+    password: "$6$3x4QOzcRQv8Tlt1T$OUx.rEP/PSk3xzJBC8QP.FpNRQTlTBQlsZYAwDWGt8BMHbnZTivkQd7kHeCdWBZZthIDuu1UlDHcVY6zDfiMo0"
     comment: Administration account
     uid: 700
 
-- name: Create Ansible user
+- name: "Create Ansible user"
   user:
     name: ansible
     system: yes
@@ -16,7 +16,7 @@
     comment: Ansible account
     uid: 701
 
-- name: Create Ebesucher user
+- name: "Create Ebesucher user"
   user:
     name: ebesucher
     system: yes
@@ -25,7 +25,7 @@
     comment: eBesucher user
     uid: 702
 
-- name: Create HitLeap user
+- name: "Create HitLeap user"
   user:
     name: hitleap
     system: yes
@@ -34,7 +34,7 @@
     comment: HitLeap user
     uid: 703
 
-- name: Create HoneyGain user
+- name: "Create HoneyGain user"
   user:
     name: honeygain
     system: yes
@@ -43,7 +43,7 @@
     comment: HoneyGain user
     uid: 704
 
-- name: Create Monero user
+- name: "Create Monero user"
   user:
     name: monero
     system: yes
@@ -52,7 +52,7 @@
     comment: Monero user
     uid: 705
 
-- name: Copy in Ansible sudoers entry
+- name: "Copy in Ansible sudoers entry"
   copy:
     src: files/sudoers_main
     dest: /etc/sudoers
@@ -60,7 +60,7 @@
     group: root
     mode: 0440
 
-- name: Copy in Ansible sudoers entry
+- name: "Copy in Ansible sudoers entry"
   copy:
     src: files/sudoers_ansible
     dest: /etc/sudoers.d/ansible
@@ -68,32 +68,32 @@
     group: root
     mode: 0440
 
-- name: Set admin user to never expire
-  command: /usr/bin/chage -E -1 admin
+- name: "Set admin user to never expire"
+  command: "/usr/bin/chage -E -1 admin"
   args:
     warn: no
 
-- name: Set admin user inactivity to -1
-  command: /usr/bin/chage -I -1 admin
+- name: "Set admin user inactivity to -1"
+  command: "/usr/bin/chage -I -1 admin"
   args:
     warn: no
 
-- name: Set admin user maxdays to -1
-  command: /usr/bin/chage -M -1 admin
+- name: "Set admin user maxdays to -1"
+  command: "/usr/bin/chage -M -1 admin"
   args:
     warn: no
 
-- name: Set admin user mindays to -1
-  command: /usr/bin/chage -m -1 admin
+- name: "Set admin user mindays to -1"
+  command: "/usr/bin/chage -m -1 admin"
   args:
     warn: no
 
-- name: Expire the Admin user password to force a reset
-  command: /usr/bin/passwd --expire admin
+- name: "Expire the Admin user password to force a reset"
+  command: "/usr/bin/passwd --expire admin"
   args:
     warn: no
 
-- name: Add admin to the wheel group
-  command: /usr/sbin/usermod -G wheel
+- name: "Add admin to the wheel group"
+  command: "/usr/sbin/usermod -G wheel"
   args:
     warn: no

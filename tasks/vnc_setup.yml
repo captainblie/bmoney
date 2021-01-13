@@ -1,4 +1,4 @@
-- name: Copy vncserver service file into systemd for admin user
+- name: "Copy vncserver service file into systemd for admin user"
   copy:
     src: /lib/systemd/system/vncserver@.service
     dest: /etc/systemd/system/vncserver@.service

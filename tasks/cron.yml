@@ -1,4 +1,4 @@
-- name: Install crontab for ansible user
+- name: "Install crontab for ansible user"
   cron:
     user: ansible
     name: "Ansible provision"

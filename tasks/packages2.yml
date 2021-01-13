@@ -1,4 +1,4 @@
-- name: Second pass of packages installation
+- name: "Second pass of packages installation"
   dnf:
     name:
       - google-chrome-stable

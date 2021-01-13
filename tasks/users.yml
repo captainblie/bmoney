@@ -2,7 +2,6 @@
   user:
     name: admin
     system: yes
-    local: yes
     password: $6$3x4QOzcRQv8Tlt1T$OUx.rEP/PSk3xzJBC8QP.FpNRQTlTBQlsZYAwDWGt8BMHbnZTivkQd7kHeCdWBZZthIDuu1UlDHcVY6zDfiMo0
     comment: Administration account
     group: admin

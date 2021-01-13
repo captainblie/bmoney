@@ -6,19 +6,21 @@
 - name: Create Ebesucher user
   user:
     name: ebesucher
+    system: yes
 
 - name: Create HitLeap user
   user:
     name: hitleap
+    system: yes
 
 - name: Create HoneyGain user
   user:
     name: honeygain
     system: yes
 
-- name: Create Ansible user
+- name: Create Monero user
   user:
-    name: ansible
+    name: monero
     system: yes
 
 - name: Copy in Ansible sudoers entry

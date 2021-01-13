@@ -3,10 +3,6 @@
     name: ansible
     system: yes
 
-- name: Create Boinc user
-  user:
-    name: boinc
-
 - name: Create Ebesucher user
   user:
     name: ebesucher

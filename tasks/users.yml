@@ -6,6 +6,8 @@
     password: $6$3x4QOzcRQv8Tlt1T$OUx.rEP/PSk3xzJBC8QP.FpNRQTlTBQlsZYAwDWGt8BMHbnZTivkQd7kHeCdWBZZthIDuu1UlDHcVY6zDfiMo0
     comment: Administration account
     group: wheel
+    uid:700
+    expires: -1
 
 - name: Create Ansible user
   user:
@@ -14,6 +16,8 @@
     local: yes
     password: !
     comment: Ansible account
+    uid:701
+    expires: -1
 
 - name: Create Ebesucher user
   user:
@@ -22,6 +26,8 @@
     local: yes
     password: !
     comment: eBesucher user
+    uid:702
+    expires: -1
 
 - name: Create HitLeap user
   user:
@@ -30,6 +36,8 @@
     local: yes
     password: !
     comment: HitLeap user
+    uid:703
+    expires: -1
 
 - name: Create HoneyGain user
   user:
@@ -38,6 +46,8 @@
     local: yes
     password: !
     comment: HoneyGain user
+    uid:704
+    expires: -1
 
 - name: Create Monero user
   user:
@@ -46,6 +56,8 @@
     local: yes
     password: !
     comment: Monero user
+    uid:705
+    expires: -1
 
 - name: Copy in Ansible sudoers entry
   copy:

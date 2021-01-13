@@ -35,8 +35,6 @@ After=syslog.target network.target
 
 [Service]
 Type=forking
-User=admin
-Group=admin
 ExecStart=/usr/libexec/vncsession-start %i
 PIDFile=/run/vncsession-%i.pid
 SELinuxContext=system_u:system_r:vnc_session_t:s0

@@ -37,12 +37,8 @@ After=syslog.target network.target
 Type=forking
 User=admin
 Group=admin
-#CJP ExecStart=/usr/libexec/vncsession-start %i
-#CJP PIDFile=/run/vncsession-%i.pid
-ExecStartPre=/usr/bin/vncserver -kill %i > /dev/null 2>&1 || :
-ExecStart=/usr/bin/vncserver %i -geometry 1280x1024
-PIDFile=/home/admin/.vnc/%H%i.pid
-ExecStop=/usr/bin/vncserver -kill %i > /dev/null 2>&1 || :
+ExecStart=/usr/libexec/vncsession-start %i
+PIDFile=/run/vncsession-%i.pid
 SELinuxContext=system_u:system_r:vnc_session_t:s0
 
 [Install]

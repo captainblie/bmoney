@@ -7,7 +7,6 @@
     comment: Administration account
     group: wheel
     uid:700
-    expires: -1
 
 - name: Create Ansible user
   user:
@@ -17,7 +16,6 @@
     password: !
     comment: Ansible account
     uid:701
-    expires: -1
 
 - name: Create Ebesucher user
   user:
@@ -27,7 +25,6 @@
     password: !
     comment: eBesucher user
     uid:702
-    expires: -1
 
 - name: Create HitLeap user
   user:
@@ -37,7 +34,6 @@
     password: !
     comment: HitLeap user
     uid:703
-    expires: -1
 
 - name: Create HoneyGain user
   user:
@@ -47,7 +43,6 @@
     password: !
     comment: HoneyGain user
     uid:704
-    expires: -1
 
 - name: Create Monero user
   user:
@@ -57,7 +52,6 @@
     password: !
     comment: Monero user
     uid:705
-    expires: -1
 
 - name: Copy in Ansible sudoers entry
   copy:
@@ -74,6 +68,26 @@
     owner: root
     group: root
     mode: 0440
+
+- name: Set admin user to never expire
+  command: /usr/bin/chage -E -1 admin
+  args:
+    warn: no
+
+- name: Set admin user inactivity to -1
+  command: /usr/bin/chage -I -1 admin
+  args:
+    warn: no
+
+- name: Set admin user maxdays to -1
+  command: /usr/bin/chage -M -1 admin
+  args:
+    warn: no
+
+- name: Set admin user mindays to -1
+  command: /usr/bin/chage -m -1 admin
+  args:
+    warn: no
 
 - name: Expire the Admin user password to force a reset
   command: /usr/bin/passwd -expire admin

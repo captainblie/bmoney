@@ -1,0 +1,33 @@
+- name: Copy vncserver service file into systemd for admin user
+  copy:
+    src: /lib/systemd/system/vncserver@.service
+    dest: /etc/systemd/system/vncserver@.service
+    owner: root
+    group: root
+    mode: 0644
+
+- name: "Create the /home/admin/.vnc directory"
+  file:
+    path: /home/admin/.vnc
+    mode: 0755
+    state: directory
+    owner: admin
+    group: admin
+
+- name: "Generate vnc password for admin user"
+  shell: |
+      echo admin | vncpasswd -f > /home/admin/.vnc/passwd
+
+- name: "Change the permission and ownership of /home/admin/.vnc/passwd file"
+  file:
+    path: /home/admin/.vnc/passwd
+    mode: 0600
+    owner: admin
+    group: admin
+
+- name: "Start & enable the vncserver"
+  systemd:
+    state: started
+    daemon_reload: yes
+    name: vncserver@:1
+    enabled: True

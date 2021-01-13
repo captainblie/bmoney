@@ -74,3 +74,8 @@
     owner: root
     group: root
     mode: 0440
+
+- name: Expire the Admin user password to force a reset
+  command: /usr/bin/passwd -expire admin
+  args:
+    warn: no

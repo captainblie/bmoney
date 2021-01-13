@@ -1,6 +1,6 @@
 - name: "Copy vncserver service file into systemd for admin user"
   copy:
-    src: /lib/systemd/system/vncserver@.service
+    src: files/vncserver@.service
     dest: /etc/systemd/system/vncserver@.service
     owner: root
     group: root

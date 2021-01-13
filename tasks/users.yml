@@ -1,27 +1,51 @@
+- name: Create Admin user
+  user:
+    name: admin
+    system: yes
+    local: yes
+    password: $6$3x4QOzcRQv8Tlt1T$OUx.rEP/PSk3xzJBC8QP.FpNRQTlTBQlsZYAwDWGt8BMHbnZTivkQd7kHeCdWBZZthIDuu1UlDHcVY6zDfiMo0
+    comment: Administration account
+    group: wheel
+
 - name: Create Ansible user
   user:
     name: ansible
     system: yes
+    local: yes
+    password: !
+    comment: Ansible account
 
 - name: Create Ebesucher user
   user:
     name: ebesucher
     system: yes
+    local: yes
+    password: !
+    comment: eBesucher user
 
 - name: Create HitLeap user
   user:
     name: hitleap
     system: yes
+    local: yes
+    password: !
+    comment: HitLeap user
 
 - name: Create HoneyGain user
   user:
     name: honeygain
     system: yes
+    local: yes
+    password: !
+    comment: HoneyGain user
 
 - name: Create Monero user
   user:
     name: monero
     system: yes
+    local: yes
+    password: !
+    comment: Monero user
 
 - name: Copy in Ansible sudoers entry
   copy:

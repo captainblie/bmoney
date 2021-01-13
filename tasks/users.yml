@@ -89,7 +89,7 @@
     warn: no
 
 - name: Expire the Admin user password to force a reset
-  command: /usr/bin/passwd -expire admin
+  command: /usr/bin/passwd --expire admin
   args:
     warn: no
 

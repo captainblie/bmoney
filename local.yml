@@ -2,15 +2,15 @@
   connection: local
   become: true
 
-  pre_tasks:
-    - name: Clean repo data
-      command: dnf clean all
-      args:
-        warn: no
-    - name: Rebuild the cache
-      command: dnf makecache
-      args:
-        warn: no
+  #CJP pre_tasks:
+    #CJP - name: Clean repo data
+      #CJP command: dnf clean all
+      #CJP args:
+        #CJP warn: no
+    #CJP - name: Rebuild the cache
+      #CJP command: dnf makecache
+      #CJP args:
+        #CJP warn: no
         
   tasks:
     - include: tasks/packages1.yml

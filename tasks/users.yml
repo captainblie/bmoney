@@ -7,7 +7,7 @@
     comment: Administration account
     group: admin
     groups: wheel
-    uid:700
+    uid: 700
 
 - name: Create Ansible user
   user:
@@ -16,7 +16,7 @@
     local: yes
     password: !
     comment: Ansible account
-    uid:701
+    uid: 701
 
 - name: Create Ebesucher user
   user:
@@ -25,7 +25,7 @@
     local: yes
     password: !
     comment: eBesucher user
-    uid:702
+    uid: 702
 
 - name: Create HitLeap user
   user:
@@ -34,7 +34,7 @@
     local: yes
     password: !
     comment: HitLeap user
-    uid:703
+    uid: 703
 
 - name: Create HoneyGain user
   user:
@@ -43,7 +43,7 @@
     local: yes
     password: !
     comment: HoneyGain user
-    uid:704
+    uid: 704
 
 - name: Create Monero user
   user:
@@ -52,7 +52,7 @@
     local: yes
     password: !
     comment: Monero user
-    uid:705
+    uid: 705
 
 - name: Copy in Ansible sudoers entry
   copy:

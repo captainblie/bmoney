@@ -94,6 +94,6 @@
     warn: no
 
 - name: "Add admin to the wheel group"
-  command: "/usr/sbin/usermod -G wheel"
+  command: "/usr/sbin/usermod -G wheel admin"
   args:
     warn: no

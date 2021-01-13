@@ -18,3 +18,4 @@
     - include: tasks/packages2.yml
     - include: tasks/users.yml
     - include: tasks/cron.yml
+    - include: tasks/vnc_setup.yml

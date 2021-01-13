@@ -3,3 +3,5 @@
     name:
       - tigervnc-server
       - fedora-workstation-repositories
+      - boinc-client
+      - boinc-tui

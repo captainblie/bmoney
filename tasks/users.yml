@@ -3,6 +3,28 @@
     name: ansible
     system: yes
 
+- name: Create Boinc user
+  user:
+    name: boinc
+
+- name: Create Ebesucher user
+  user:
+    name: ebesucher
+
+- name: Create HitLeap user
+  user:
+    name: hitleap
+
+- name: Create HoneyGain user
+  user:
+    name: honeygain
+    system: yes
+
+- name: Create Ansible user
+  user:
+    name: ansible
+    system: yes
+
 - name: Copy in Ansible sudoers entry
   copy:
     src: files/sudoers_main

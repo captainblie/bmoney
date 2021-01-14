@@ -39,3 +39,10 @@
     daemon_reload: yes
     name: vncserver@:1
     enabled: True
+
+- name: Open port for vncserver
+  ansible.posix.firewalld:
+    port: 5901/tcp
+    permanent: yes
+    state: enabled
+

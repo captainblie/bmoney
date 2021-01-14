@@ -25,15 +25,6 @@
     comment: eBesucher user
     uid: 702
 
-- name: "Create HitLeap user"
-  user:
-    name: hitleap
-    system: yes
-    local: yes
-    password: !
-    comment: HitLeap user
-    uid: 703
-
 - name: "Create HoneyGain user"
   user:
     name: honeygain
@@ -41,7 +32,7 @@
     local: yes
     password: !
     comment: HoneyGain user
-    uid: 704
+    uid: 703
 
 - name: "Create Monero user"
   user:
@@ -50,7 +41,7 @@
     local: yes
     password: !
     comment: Monero user
-    uid: 705
+    uid: 704
 
 - name: "Copy in Ansible sudoers entry"
   copy:

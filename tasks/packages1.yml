@@ -5,5 +5,4 @@
       - fedora-workstation-repositories
       - boinc-client
       - boinc-tui
-      - ansible-collection-ansible-posix.noarch
       - vim-ansible.noarch

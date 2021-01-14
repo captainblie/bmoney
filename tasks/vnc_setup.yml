@@ -44,5 +44,7 @@
   ansible.posix.firewalld:
     port: 5901/tcp
     permanent: yes
+    immediate: yes
+    zone: public
     state: enabled
 

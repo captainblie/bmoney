@@ -1,8 +1,10 @@
 - name: "First pass of packages installation"
   dnf:
     name:
+      - cronie
       - tigervnc-server
       - fedora-workstation-repositories
       - boinc-client
       - boinc-tui
       - vim-ansible.noarch
+      - atop

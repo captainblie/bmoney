@@ -2,16 +2,16 @@
   copy:
     src: files/remote_hosts.cfg
     dest: /var/lib/boinc/remote_hosts.cfg
-    owner: root
-    group: root
+    owner: boinc
+    group: boinc
     mode: 0644
 
 - name: "Copy in boinc auth file"
   copy:
     src: files/gui_rpc_auth.cfg
     dest: /var/lib/boinc/gui_rpc_auth.cfg
-    owner: root
-    group: root
+    owner: boinc
+    group: boinc
     mode: 0644
 
 - name: "Start & enable boinc"

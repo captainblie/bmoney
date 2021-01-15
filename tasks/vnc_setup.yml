@@ -40,12 +40,12 @@
     name: vncserver@:1
     enabled: True
 
-# - name: "Open port for vncserver"
-  # become: yes
-  # ansible.posix.firewalld:
-    # port: 5901/tcp
-    # permanent: yes
-    # immediate: yes
-    # zone: public
-    # state: enabled
+- name: "Open port for vncserver"
+  become: yes
+  firewalld:
+    port: 5901/tcp
+    permanent: yes
+    immediate: yes
+    zone: public
+    state: enabled
 

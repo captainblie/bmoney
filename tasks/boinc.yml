@@ -20,3 +20,14 @@
     daemon_reload: yes
     name: boinc-client
     enabled: True
+
+
+- name: "Open port for boinc-client"
+  become: yes
+  firewalld:
+    port: 31416/tcp
+    permanent: yes
+    immediate: yes
+    zone: public
+    state: enabled
+

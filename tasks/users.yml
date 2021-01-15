@@ -16,33 +16,6 @@
     comment: Ansible account
     uid: 701
 
-- name: "Create Ebesucher user"
-  user:
-    name: ebesucher
-    system: yes
-    local: yes
-    password: !
-    comment: eBesucher user
-    uid: 702
-
-- name: "Create HoneyGain user"
-  user:
-    name: honeygain
-    system: yes
-    local: yes
-    password: !
-    comment: HoneyGain user
-    uid: 703
-
-- name: "Create Monero user"
-  user:
-    name: monero
-    system: yes
-    local: yes
-    password: !
-    comment: Monero user
-    uid: 704
-
 - name: "Copy in Ansible sudoers entry"
   copy:
     src: files/sudoers_main

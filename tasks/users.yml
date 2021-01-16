@@ -52,11 +52,6 @@
   args:
     warn: no
 
-- name: "Expire the Admin user password to force a reset"
-  command: "/usr/bin/passwd --expire admin"
-  args:
-    warn: no
-
 - name: "Add admin to the wheel group"
   command: "/usr/sbin/usermod -G wheel admin"
   args:

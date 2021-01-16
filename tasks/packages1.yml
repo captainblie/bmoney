@@ -11,3 +11,4 @@
       - lm_sensors
       - wine
       - winetricks
+      - ksh

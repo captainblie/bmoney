@@ -12,3 +12,4 @@
       - wine
       - winetricks
       - ksh
+      - xorg-x11-server-Xvfb

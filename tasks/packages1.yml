@@ -9,3 +9,5 @@
       - vim-ansible.noarch
       - atop
       - lm_sensors
+      - wine
+      - winetricks

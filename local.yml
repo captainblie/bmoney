@@ -19,4 +19,4 @@
     - include: tasks/users.yml
     - include: tasks/cron.yml
     - include: tasks/vnc_setup.yml
-    #CJP - include: tasks/boinc.yml
+    - include: tasks/boinc.yml

@@ -9,7 +9,5 @@
       - vim-ansible.noarch
       - atop
       - lm_sensors
-      - wine
-      - winetricks
       - ksh
-      - xorg-x11-server-Xvfb
+      - snapd
